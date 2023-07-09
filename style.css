@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.task-list {
+  width: 100%;
+  max-width: 31.25rem;
+  background: #fff;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 1.5rem;
+}
+.task-list h2 {
+  font-size: 1.5rem;
+}
+.task-list img {
+  width: 40px;
+  height: 40px;
+}
+.task-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task-box input {
+  flex: 1;
+  padding: 15px;
+  width: 20rem;
+  position: absolute;
+  border-radius: 3rem;
+}
+.task-box button {
+  padding: 15px;
+  width: 7rem;
+  outline: none;
+  z-index: 1;
+  margin-left: 13rem;
+  background-color: #e66465;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+ul {
+  margin-right: 12rem;
+}
+ul li {
+  list-style: none;
+  position: relative;
+  margin: 1rem;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  background-image: url("assets/circle.png");
+  background-position: center;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+  top: 0.2rem;
+  left: -2rem;
+  filter: grayscale(100%);
+}
+
+ul li.check {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.check::before {
+  background-image: url("asssets/pngwing.com.png");
+}
+
+ul li span {
+  position: absolute;
+  right: -210px;
+  top: -6px;
+  width: 25px;
+  height: 25px;
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+  line-height: 26px;
+  border-radius: 70%;
+  background-color: rgb(255, 0, 0);
+}
